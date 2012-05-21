@@ -14,18 +14,25 @@ var jasLib = (function() {
 	 	return false;
 		}		
 	};
-	// var emailValidate =function (emailString) {
-	// 	var emailRE = 
-	// };
+	var emailValidate =function (emailString) {
+		var emailRE = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		if (emailRE.test(emailString)) {
+			return true;
+		} else {
+			return false;
+		}
+	};
 
 	return {
-			phoneValidate: phoneValidate
+			phoneValidate: phoneValidate,
+			emailValidate: emailValidate
 	};	
 }());
 
 var jlib = jasLib;
 console.log(jasLib.phoneValidate("333-444-4444"));
 console.log(jlib.phoneValidate("333-324-2323"));
+console.log(jlib.emailValidate("jbae@fullsail.edu"));
 
 
 
