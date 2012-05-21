@@ -30,11 +30,15 @@ var jasLib = (function() {
 			return false;
 		}
 	};
+	var stringToNumber = function (numString) {
+		return parseFloat(numString);
+	};
 
 	return {
 			phoneValidate: phoneValidate,
 			emailValidate: emailValidate,
-			urlValidate: urlValidate
+			urlValidate: urlValidate,
+			stringToNumber: stringToNumber
 	};	
 }());
 
@@ -43,6 +47,7 @@ console.log(jasLib.phoneValidate("333-444-4444"));
 console.log(jlib.phoneValidate("333-324-2323"));
 console.log(jlib.emailValidate("jbae@fullsail.edu"));
 console.log(jlib.urlValidate("https://www.this.com"));
+console.log(jlib.stringToNumber("452"));
 
 
 
