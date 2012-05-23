@@ -55,16 +55,17 @@ var jasLib = function() {
 	return  num.toFixed(2);
 	};
 
+	// Array of Objects Sort
 	var  sortObjects = function(array, key) {
 		for (var i = 0; i < array.length; i++) {
-		var currVal = array[i][key];
-		var currElem = array[i];
+		var Value = array[i][key];
+		var Elem = array[i];
 		var j = i - 1;
-		while ((j >= 0) && (array[j][key] > currVal)) {
+		while ((j >= 0) && (array[j][key] > Value)) {
 		array[j + 1] = array[j];
 		j--;
 		}
-		array[j + 1] = currElem;
+		array[j + 1] = Elem;
 		}
 		return array;
 	};
