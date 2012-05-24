@@ -57,23 +57,7 @@ var jasLib = function() {
 	return  num.toFixed(2);
 	};
 
-	//Array of Objects Sort
-	// iterates through the array objects, returns array either by ascending number or alphabetically based on the value of the key.
-	var  sortObjects = function(arrayData, key) {
-		for (var i = 0; i < arrayData.length; i++) {
-		var Value = arrayData[i][key];
-		var Elem = arrayData[i];
-		var j = i - 1;
-			while ((j >= 0) && (arrayData[j][key] > Value)) {
-			arrayData[j + 1] = arrayData[j];
-			j--;
-			}
-		arrayData[j + 1] = Elem;
-		}
-		return arrayData;
-	};
-
-	//Difference Between Dates (in Days)
+//Difference Between Dates (in Days)
 	// one day (in milliseconds) is 24*60*60*1000.  Difference is the two dates divided by one days worth of milliseconds.
 	// new Date(string) creates a new date object for use with a date method.
 	var daysBetweenDates = function (DateOne, DateTwo) {
@@ -83,20 +67,14 @@ var jasLib = function() {
 
 	  	var days = Math.floor( diff / 1000 /60 /60 /24 );
 	  	return days;
-	
 	};
 	
-
-	
-
-
 	return {
 			"phoneValidate": phoneValidate,
 			"emailValidate": emailValidate,
 			"urlValidate": urlValidate,
 			"stringToNumber": stringToNumber,
 			"moneyFormat": moneyFormat,
-			"sortObjects": sortObjects,
 			"daysBetweenDates": daysBetweenDates
 			
 	};	
