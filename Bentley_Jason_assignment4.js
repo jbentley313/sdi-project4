@@ -23,7 +23,6 @@ console.log(jlib.stringToNumber("452"));
 //Test: Money Format (2 decimal places) 
 console.log(jlib.moneyFormat(20.1));
 
-
 //Test: Difference Between Two Dates (in days)
 var firstDate = "1/03/2012";
 var secondDate = "2/14/2012";
